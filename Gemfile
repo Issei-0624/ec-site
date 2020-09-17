@@ -62,11 +62,11 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'kaminari'
-
 gem 'devise'
-
 group :development do
   gem 'letter_opener_web'
 end
-
 gem 'faker'
+
+gem 'active_decorator'
+gem 'simple_form'

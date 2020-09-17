@@ -1,1 +1,14 @@
-<h1>Home</h1>
+<h1 class="text-center mb-5">商品一覧</h1>
+
+
+  <% @products.each do |product| %>
+      <div class="media-body border">
+          <h3 class ='product-name'><%= product.name %></h3> 
+          <p class="p-description"><%= product.description %></p>
+          <p><%= product.price %>円</p>
+        <div class ='media-bottom border-top' >
+          <a href="#" class="nav-link">詳細</a>
+        </div>
+      </div>
+  <% end %>
+  <%= paginate @products %>

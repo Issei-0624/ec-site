@@ -1,0 +1,8 @@
+<h1>新規商品の追加</h1>
+
+
+<%= simple_form_for @product do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%= f.input_field :price %>
+<% end %>
