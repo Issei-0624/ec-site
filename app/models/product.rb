@@ -4,5 +4,4 @@ class Product < ApplicationRecord
     
     validates :name, presence: true
     validates :description, presence: true
-  　include Hashid::Rails
 end

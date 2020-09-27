@@ -6,7 +6,7 @@ class ProductsController < ApplicationController
   end
   
   def show
-    
+
   end
 
   def create
@@ -31,8 +31,7 @@ end
   end
   
   def correct_user
-    @product = current_user.products.find_by(hashid: params[:hashid])
-    @product.hashid
+    @product = current_user.products.find_by_hashid!(params[:id])
     unless @product
       redirect_to root_url
     end
