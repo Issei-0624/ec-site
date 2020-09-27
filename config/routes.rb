@@ -1,8 +1,4 @@
 Rails.application.routes.draw do
-  get 'products/new'
-  get 'products/create'
-  get 'products/destroy'
-  get 'home/index'
   devise_for :users
   
   if Rails.env.development?
@@ -11,5 +7,5 @@ Rails.application.routes.draw do
   
   root to: "home#index"
   
-  resources :products, only: [:create, :destroy,:new]
+  resources :products
 end

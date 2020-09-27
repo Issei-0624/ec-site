@@ -6,5 +6,5 @@ class User < ApplicationRecord
     config.scoped_views = true
     
     has_many :products
-end
+  end
 end
