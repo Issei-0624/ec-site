@@ -73,3 +73,6 @@ gem 'simple_form'
 gem 'carrierwave', '~> 2.0'
 gem 'mini_magick'
 gem "hashid-rails", "~> 1.0"
+group :production do
+  gem 'pg', '>= 0.18', '< 2.0'
+end
