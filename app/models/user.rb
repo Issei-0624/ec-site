@@ -4,7 +4,13 @@ class User < ApplicationRecord
          
   Devise.setup do |config|
     config.scoped_views = true
-    
-    has_many :products
   end
+  
+    has_many :products
+    
+    has_one :cart, dependent: :destroy
+    
+    def prepare_cart
+      cart || create_cart
+    end
 end

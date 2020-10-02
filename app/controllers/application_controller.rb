@@ -4,11 +4,4 @@ class ApplicationController < ActionController::Base
       root_path
   end
   
-    private
-
-  def require_user_singed_in
-    unless signed_in?
-      redirect_to root_url
-    end
-  end
 end

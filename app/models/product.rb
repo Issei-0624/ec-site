@@ -4,4 +4,7 @@ class Product < ApplicationRecord
     
     validates :name, presence: true
     validates :description, presence: true
+    
+    has_many :cart_products, dependent: :destroy   
+ 
 end

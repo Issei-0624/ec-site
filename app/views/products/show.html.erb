@@ -1,4 +1,4 @@
-<a><%= image_tag @product.image.url %></a>
+<%= image_tag @product.image.url %></a>
 
 <ul class="list-unstyled pl-3 border">
     <h3 class="produt-name"><%= @product.name %></h3>
@@ -6,4 +6,4 @@
     <li class="price"><%= @product.price.to_s(:delimited) %>円 </li>
 </ul>
 
-<%= button_to "買い物カゴに入れる", :class => 'btn-success' %>
+<a><%= link_to '買い物かごに入れる', product_add_to_carts_path(@product), method: :post ,class: "btn btn-success" %></a>

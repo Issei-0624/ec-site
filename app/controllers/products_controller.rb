@@ -1,12 +1,11 @@
 class ProductsController < ApplicationController
-  before_action :correct_user, only: [:show, :edit, :update, :destroy]
+  before_action :correct_user, only: [:show,:destroy]
   
   def new
     @product = Product.new
   end
   
   def show
-
   end
 
   def create
