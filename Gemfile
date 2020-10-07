@@ -76,3 +76,7 @@ gem "hashid-rails", "~> 1.0"
 group :production do
   gem 'pg', '>= 0.18', '< 2.0'
 end
+
+gem 'stripe'
+
+gem 'dotenv-rails', groups: [:development, :test]
