@@ -1,3 +1,81 @@
-// Place all the styles related to the products controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.container-fluid{
+    text-align: center;
+}
+.media{
+    display: inline-block;
+    width: 525px;
+    margin-bottom: 10px;
+    text-align: left;
+    margin-right: 10px;
+    box-shadow: 1px 2px 4px gray;
+}
+
+ .media-body{
+    position: relative;
+ }
+ .media-body p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    color: white;
+    bottom: 0;
+    left: 20px;
+    font-size: 30px;
+ }
+ 
+ .media-body img{
+     height: 280px;
+     width: 100%;
+ }
+
+.media-footer{
+    padding: 10px 5px 5px 15px;
+}
+
+
+input#product_name.form-control{
+    border-bottom:1px solid #cccccc;
+    border-right:none;
+    border-left:none;
+    border-top:none;
+    border-radius:0px;
+}
+input#product_price.form-control{
+    border-bottom:1px solid #cccccc;
+    border-right:none;
+    border-left:none;
+    border-top:none;
+    border-radius:0px;
+}
+label{
+    color: gray;
+}
+.btn{
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  border-bottom: solid 4px #627295;
+  border-radius: 3px;
+  background: #668ad8;
+  color: #FFF;
+}
+
+.btn:active{
+  -webkit-transform: translate(4px);
+  transform: translate(4px);
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+  border-bottom: none;
+}
+
+
+
+.show-body{
+    width: 650px;
+    margin: auto;
+}
+
+ .show-image img{
+     height: 500px;
+     width: 650px;
+ }

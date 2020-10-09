@@ -1,5 +1,5 @@
 class Product < ApplicationRecord
-    belongs_to :user
+    belongs_to :admin
     mount_uploader :image, ImageUploader
     
     validates :name, presence: true
@@ -8,5 +8,6 @@ class Product < ApplicationRecord
     has_many :cart_products, dependent: :destroy   
     
     has_many :purchase_record_products, dependent: :destroy
+    
  
 end

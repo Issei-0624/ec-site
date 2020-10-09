@@ -1,21 +1,15 @@
 Rails.application.routes.draw do
-  devise_for :admins, controllers: {
-  sessions: 'admins/sessions'
-}
-  devise_for :users
+
+devise_for :admins
+devise_for :users
   
   if Rails.env.development?
     mount LetterOpenerWeb::Engine, at: "/letter_opener"
   end
   
-  root to: "home#index"
-
-  resources :admin, only: [:index]
-    namespace :admin do
-      resources :products, only: [:new,:show,:create] 
-    end
+  root to: "products#index"
   
-  resources :products, only: [:new,:show,:create] do
+  resources :products, only: [:show] do
     scope module: :products do
       resources :add_to_carts, only: [:create]
       resources :delete_in_carts, only: [:create]
@@ -26,6 +20,9 @@ Rails.application.routes.draw do
   
   resource :charge, only: [:create]
 
-    
+   namespace :admins do
+      root to: "toppages#index"
+      resources :products, only: [:new, :create]
+   end
   
 end
