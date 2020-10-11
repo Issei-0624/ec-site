@@ -31,9 +31,10 @@ test:
   host: localhost
 
 production:
-  adapter: postgresql
-  encoding: unicode
+  adapter: mysql2
+  encoding: utf8
+  database: sample_mysql_production
   pool: 5
-  database: message-board_production
-  username: message-board
-  password: <%= ENV['MESSAGE-BOARD_DATABASE_PASSWORD'] %>
+  username: root
+  password:
+  host: localhost

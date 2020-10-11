@@ -31,5 +31,6 @@
 /config/master.key
 vendor
 
-/.env
+.env
+/config/database.yml
 

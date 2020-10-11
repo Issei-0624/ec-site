@@ -2,12 +2,7 @@ Rails.application.routes.draw do
 
 devise_for :admins
 devise_for :users
-  
-  if Rails.env.development?
-    mount LetterOpenerWeb::Engine, at: "/letter_opener"
-  end
-  
-  root to: "products#index"
+root to: "products#index"
   
   resources :products, only: [:show] do
     scope module: :products do

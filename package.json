@@ -1,5 +1,7 @@
 {
   "name": "ec_site",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  }
 }
