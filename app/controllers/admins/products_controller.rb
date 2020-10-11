@@ -6,10 +6,10 @@ class Admins::ProductsController < Admins::ApplicationController
   def create
     @product = current_admin.products.build(product_params)
       if @product.save
-          flash[:success] = "Productが正常に投稿されました"
+          flash[:success] = "Productが正常に作成されました"
           redirect_to root_path
       else
-          flash.now[:danger] = "Productが正常に投稿されませんでした"
+          flash.now[:danger] = "Productが正常に再生されませんでした"
           render :new
       end
   end

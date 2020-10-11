@@ -23,6 +23,7 @@ devise_for :users
    namespace :admins do
       root to: "toppages#index"
       resources :products, only: [:new, :create]
+      resource :sales_record, only: [:show]
    end
-  
+   
 end

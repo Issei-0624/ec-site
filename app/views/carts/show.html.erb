@@ -13,7 +13,9 @@
   <p class='text-right mt-3'>合計金額 <%= @products.sum(:price) %>円</p>
 
 <%= form_tag charge_path do%>
-    <%= hidden_field_tag 'product_ids[]', @products.ids %>
+  <% @products.each do |p| %>
+    <%= hidden_field_tag 'product_ids[]', p.id %>
+  <% end %>
       <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
           data-description="payment"

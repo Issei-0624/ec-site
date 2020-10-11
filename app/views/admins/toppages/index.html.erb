@@ -1,2 +1,14 @@
-<h1>Admins::Toppages#index</h1>
-<p>Find me in app/views/admins/top/index.html.erb</p>
+<div class="container">
+  <h2 class="text-center">Adminトップページ</h2>
+  　<ul class="list-group list-unstyled">
+        <li class="admin-sales-all d-flex justify-content-between border">
+          <p>今までの売上  <span><%=current_admin.sales.to_s %>円</span></p>
+          <a><%=link_to '詳細', admins_sales_record_path,class: "btn btn-success"%></a>
+        </li>
+        <li class="admin-sales-one-month d-flex justify-content-between border">
+          <p>今月の売上   <span><%=current_admin.sales_one_month.to_s %>円</span></p>
+          <a><%=link_to '詳細', admins_sales_record_path(start_at: Time.current.beginning_of_month, end_at: Time.current.end_of_month), class: "btn btn-success"%></a>
+        </li>
+    </ul>
+   </h2>
+</div>

@@ -6,8 +6,6 @@ class User < ApplicationRecord
     config.scoped_views = true
   end
   
-    has_many :products
-    
     has_one :cart, dependent: :destroy
     has_one :purchase_record,dependent: :destroy
     
@@ -19,7 +17,7 @@ class User < ApplicationRecord
       purchase_record || create_purchase_record
     end
     
-    def checkout
+    def checkout!(token, product_ids:)
       transaction do
         cart_products = cart.cart_products.where(product_id: product_ids)
         cart_products.each(&:destroy!)

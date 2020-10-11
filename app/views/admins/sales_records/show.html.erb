@@ -1,0 +1,22 @@
+<div class="container">
+  <h2 class="text-center">売上詳細</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>商品名</th>
+                <th>価格</th>
+                <th>購入日</th>
+            </tr>
+        </thead>
+        <tbody>
+          <% @purchase_record_products.each do |prd| %>
+            <% product = prd.product %>
+            <tr>
+                <td><%=product.name %></td>
+                <td><%=product.price %>円</td>
+                <td><%=product.created_at %></td>
+            </tr>
+          <% end %>
+        </tbody>
+    </table>
+</div>    
